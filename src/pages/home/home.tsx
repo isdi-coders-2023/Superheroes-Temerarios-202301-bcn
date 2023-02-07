@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { HitsStructure } from "../../data/data";
-import { useGetRecipes } from "../../hooks/useGetRecipes";
+import { HitStructure } from "../../data/data";
+import { useApiRequest } from "../../hooks/useGetRecipes";
 
 const Home = (): JSX.Element => {
-  const [recipeList, setRecipeList] = useState<HitsStructure>([]);
-  const recipe = useGetRecipes();
+  const [recipeList, setRecipeList] = useState<HitStructure[]>([]);
+  const recipe = useApiRequest();
 
   useEffect(() => {
     const fetchRecipes = async () => {
