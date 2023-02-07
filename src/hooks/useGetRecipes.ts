@@ -1,9 +1,9 @@
-import { hitsStructure, linksStructure } from "../data/data";
+import { hitsStructure, LinksStructure } from "../data/data";
 
 export interface recipeListStructure {
   from: number;
   to: number;
-  _links: linksStructure;
+  _links: LinksStructure;
   hits: hitsStructure[];
 }
 
