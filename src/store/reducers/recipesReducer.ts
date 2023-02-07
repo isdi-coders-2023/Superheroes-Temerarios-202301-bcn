@@ -6,10 +6,10 @@ import {
 } from "../actions/recipes/types";
 
 const recipesReducer = (
-  currentRecipes: HitsStructure[],
+  currentRecipes: HitsStructure,
   action: RecipeAction
-): HitsStructure[] => {
-  let newRecipes: HitsStructure[];
+): HitsStructure => {
+  let newRecipes: HitsStructure;
 
   switch (action.type) {
     case RecipesActionType.loadRecipes:

@@ -1,4 +1,11 @@
-export interface HitsStructure {
+export interface responseStructure {
+  from: number;
+  to: number;
+  _links: LinksStructure;
+  hits: HitsStructure;
+}
+
+export interface HitStructure {
   recipe: RecipeStructure;
 }
 
@@ -25,15 +32,6 @@ export interface TotalNutrientsStructure {
   CHOLE: FactStructure;
   VITA_RAE: FactStructure;
   VITC: FactStructure;
-  THIA: FactStructure;
-  RIBF: FactStructure;
-  NIA: FactStructure;
-  VITB6A: FactStructure;
-  VITB12: FactStructure;
-  VITD: FactStructure;
-  TOCPHA: FactStructure;
-  VITK1: FactStructure;
-  WATER: FactStructure;
 }
 
 export interface TotalDailyStructure extends TotalNutrientsStructure {}
@@ -57,3 +55,5 @@ export interface LinksStructure {
 export interface NextPrevStructure {
   href: string;
 }
+
+export type HitsStructure = HitStructure[];
