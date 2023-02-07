@@ -11,10 +11,15 @@ const RecipesContextProvider = ({
   children,
 }: RecipesContextProviderProps): JSX.Element => {
   const [recipes, dispatch] = useReducer(recipesReducer, []);
-  const foo = useMemo(() => ({ recipes, dispatch }), [recipes]);
+  const recipesProviderProps = useMemo(
+    () => ({ recipes, dispatch }),
+    [recipes]
+  );
 
   return (
-    <RecipesContext.Provider value={foo}>{children}</RecipesContext.Provider>
+    <RecipesContext.Provider value={recipesProviderProps}>
+      {children}
+    </RecipesContext.Provider>
   );
 };
 
