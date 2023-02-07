@@ -1,5 +1,5 @@
 export interface hitsStructure {
-  recipe: recipeStructure;
+  recipe: recipeStructure[];
 }
 
 export interface recipeStructure {
