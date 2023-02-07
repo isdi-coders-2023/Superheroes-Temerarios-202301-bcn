@@ -2,6 +2,7 @@ import { HitsStructure } from "../../../data/data";
 
 export enum RecipesActionType {
   loadRecipes,
+  defaultTest,
 }
 
 export interface RecipeAction {

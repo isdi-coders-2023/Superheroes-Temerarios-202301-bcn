@@ -3,7 +3,7 @@ import { HitsStructure } from "../../data/data";
 import { useGetRecipes } from "../../hooks/useGetRecipes";
 
 const Home = (): JSX.Element => {
-  const [recipeList, setRecipeList] = useState<HitsStructure[]>([]);
+  const [recipeList, setRecipeList] = useState<HitsStructure>([]);
   const recipe = useGetRecipes();
 
   useEffect(() => {
