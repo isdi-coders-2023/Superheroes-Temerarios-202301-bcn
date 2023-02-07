@@ -1,10 +1,10 @@
-import { hitsStructure, linksStructure } from "../data/data";
+import { HitsStructure, LinksStructure } from "../data/data";
 
 export interface recipeListStructure {
   from: number;
   to: number;
-  _links: linksStructure;
-  hits: hitsStructure[];
+  _links: LinksStructure;
+  hits: HitsStructure[];
 }
 
 export const useApiRequest = () => {

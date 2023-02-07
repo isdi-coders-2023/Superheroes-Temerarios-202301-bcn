@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import { hitsStructure, linksStructure } from "./data/data";
+import { HitsStructure, LinksStructure } from "./data/data";
 import Home from "./pages/home/home";
 
 interface responseStructure {
   from: number;
   to: number;
-  _links: linksStructure;
-  hits: hitsStructure;
+  _links: LinksStructure;
+  hits: HitsStructure;
 }
 
 function App() {

@@ -1,59 +1,59 @@
-export interface hitsStructure {
-  recipe: recipeStructure[];
+export interface HitsStructure {
+  recipe: RecipeStructure[];
 }
 
-export interface recipeStructure {
+export interface RecipeStructure {
   label: string;
   image: string;
   dietLabels: string[];
   healthLabels: string[];
-  ingredients: ingredientsStructure[];
+  ingredients: IngredientsStructure[];
   calories: number;
   totalTime: number;
   cuisineType: string[];
-  totalNutrients: totalNutrientsStructure;
-  totalDaily: totalDailyStructure;
+  totalNutrients: TotalNutrientsStructure;
+  totalDaily: TotalDailyStructure;
 }
 
-export interface totalNutrientsStructure {
-  ENERC_KCAL: factStructure;
-  FAT: factStructure;
-  CHOCDF: factStructure;
-  FIBTG: factStructure;
-  SUGAR: factStructure;
-  PROCNT: factStructure;
-  CHOLE: factStructure;
-  VITA_RAE: factStructure;
-  VITC: factStructure;
-  THIA: factStructure;
-  RIBF: factStructure;
-  NIA: factStructure;
-  VITB6A: factStructure;
-  VITB12: factStructure;
-  VITD: factStructure;
-  TOCPHA: factStructure;
-  VITK1: factStructure;
-  WATER: factStructure;
+export interface TotalNutrientsStructure {
+  ENERC_KCAL: FactStructure;
+  FAT: FactStructure;
+  CHOCDF: FactStructure;
+  FIBTG: FactStructure;
+  SUGAR: FactStructure;
+  PROCNT: FactStructure;
+  CHOLE: FactStructure;
+  VITA_RAE: FactStructure;
+  VITC: FactStructure;
+  THIA: FactStructure;
+  RIBF: FactStructure;
+  NIA: FactStructure;
+  VITB6A: FactStructure;
+  VITB12: FactStructure;
+  VITD: FactStructure;
+  TOCPHA: FactStructure;
+  VITK1: FactStructure;
+  WATER: FactStructure;
 }
 
-export interface totalDailyStructure extends totalNutrientsStructure {}
+export interface TotalDailyStructure extends TotalNutrientsStructure {}
 
-export interface factStructure {
+export interface FactStructure {
   label: string;
   quantity: number;
   unit: string;
 }
 
-export interface ingredientsStructure {
+export interface IngredientsStructure {
   text: string;
   quantity: number;
   measure: string;
 }
 
-export interface linksStructure {
-  next: nextPrevStructure;
+export interface LinksStructure {
+  next: NextPrevStructure;
 }
 
-export interface nextPrevStructure {
+export interface NextPrevStructure {
   href: string;
 }
