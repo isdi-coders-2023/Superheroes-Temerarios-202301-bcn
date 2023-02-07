@@ -1,8 +1,8 @@
-export interface responseStructure {
+export interface RecipeListStructure {
   from: number;
   to: number;
   _links: LinksStructure;
-  hits: HitsStructure;
+  hits: HitStructure[];
 }
 
 export interface HitStructure {

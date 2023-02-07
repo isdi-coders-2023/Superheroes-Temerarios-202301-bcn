@@ -1,7 +1,14 @@
 import React from "react";
 import "./App.css";
-import { responseStructure } from "./data/data";
+import { HitsStructure, LinksStructure } from "./data/data";
 import Home from "./pages/home/home";
+
+interface responseStructure {
+  from: number;
+  to: number;
+  _links: LinksStructure;
+  hits: HitsStructure;
+}
 
 function App() {
   const baseUrl =
