@@ -11,5 +11,5 @@ export interface RecipeAction {
 
 export interface LoadRecipesAction extends RecipeAction {
   type: RecipesActionType.loadRecipes;
-  payload: HitsStructure;
+  payload: HitsStructure[];
 }
