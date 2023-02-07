@@ -7,7 +7,7 @@ interface responseStructure {
   from: number;
   to: number;
   _links: LinksStructure;
-  hits: HitsStructure[];
+  hits: HitsStructure;
 }
 
 function App() {
