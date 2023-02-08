@@ -6,7 +6,10 @@ describe("Given a Home component", () => {
     test("Then it should show a heading on the screen", () => {
       render(<HomePage />);
 
-      const heading = screen.getByRole("heading");
+      const heading = screen.getByRole("heading", {
+        level: 1,
+        name: "Hack'n'Eat",
+      });
 
       expect(heading).toBeInTheDocument();
     });
