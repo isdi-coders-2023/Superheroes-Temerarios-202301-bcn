@@ -10,6 +10,7 @@ export const useApiRequest = () => {
     try {
       const list = await fetch(`${process.env.REACT_APP_HACKANDEAT_URL!}`);
       const response = (await list.json()) as RecipeListStructure;
+
       dispatch(loadRecipesActionCreator(response.hits));
     } catch (error) {
       return (error as Error).message;
