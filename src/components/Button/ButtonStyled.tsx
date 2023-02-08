@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonStyled = styled.article`
+const ButtonStyled = styled.button`
   button {
     background-color: #2edb73;
     width: 55px;
