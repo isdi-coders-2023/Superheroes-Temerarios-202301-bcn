@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { HitsStructure } from "../../../data/data";
+import { HitsStructure } from "../../../data/types";
 import { RecipeAction } from "../../actions/recipes/types";
 
 interface RecipesContextStructure {

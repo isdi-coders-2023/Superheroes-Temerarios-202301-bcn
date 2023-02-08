@@ -1,4 +1,4 @@
-import { HitsStructure } from "../data/data";
+import { HitsStructure } from "../data/types";
 import RecipesContext from "../store/contexts/recipes/RecipesContext";
 
 interface MockContextProviderProps {

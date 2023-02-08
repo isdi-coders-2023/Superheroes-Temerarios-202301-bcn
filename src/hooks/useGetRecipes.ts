@@ -1,5 +1,5 @@
 import { useCallback, useContext } from "react";
-import { RecipeListStructure } from "../data/data";
+import { RecipeListStructure } from "../data/types";
 import { loadRecipesActionCreator } from "../store/actions/recipes/recipesActionCreators";
 import RecipesContext from "../store/contexts/recipes/RecipesContext";
 

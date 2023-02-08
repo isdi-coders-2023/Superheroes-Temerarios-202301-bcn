@@ -1,4 +1,4 @@
-import { HitsStructure } from "../data/data";
+import { HitsStructure } from "../data/types";
 import {
   LoadRecipesAction,
   RecipeAction,

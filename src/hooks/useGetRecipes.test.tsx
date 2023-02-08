@@ -1,17 +1,10 @@
 import useApiRequest from "./useGetRecipes";
-import { renderHook, act, waitFor } from "@testing-library/react";
-import { HitsStructure } from "../data/data";
-import RecipesContext from "../store/contexts/recipes/RecipesContext";
-import {
-  mockDispatch,
-  mockLoadRecipesAction,
-  mockStore,
-} from "../mocks/mockStore";
+import { renderHook, waitFor } from "@testing-library/react";
+import { mockDispatch, mockStore } from "../mocks/mockStore";
 import MockContextProvider from "../mocks/MockContextProvider";
 
 const dispatch = mockDispatch;
 const store = mockStore;
-const loadRecipesAction = mockLoadRecipesAction;
 
 describe("Given a useApiRequest function", () => {
   describe("When it receives a list of recipes", () => {
