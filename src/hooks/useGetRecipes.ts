@@ -1,4 +1,4 @@
-import { HitStructure, LinksStructure } from "../data/data";
+import { HitStructure, LinksStructure } from "../data/types";
 
 export interface recipeListStructure {
   from: number;
