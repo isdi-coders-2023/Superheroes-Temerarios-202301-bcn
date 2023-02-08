@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-const AddButtonStyled = styled.article`
+const ButtonStyled = styled.article`
   button {
     background-color: #2edb73;
     width: 55px;
     height: 55px;
     border: none;
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: 5px;
   }
 `;
 
-export default AddButtonStyled;
+export default ButtonStyled;
