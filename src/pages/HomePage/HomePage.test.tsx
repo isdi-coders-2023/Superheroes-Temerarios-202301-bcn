@@ -1,17 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import App from "../../App";
+import HomePage from "./HomePage";
 
 describe("Given a Home component", () => {
-  describe("When its rendered with a heading", () => {
-    test("Then it should show a heading on the screen", () => {
-      render(<App />);
+  describe("When its rendered with a nutton", () => {
+    test("Then it should show a button on the screen", () => {
+      render(<HomePage />);
 
-      const heading = screen.getByRole("heading", {
-        level: 1,
-        name: "Hack'n'Eat",
-      });
+      const button = screen.getByRole("button");
 
-      expect(heading).toBeInTheDocument();
+      expect(button).toBeInTheDocument();
     });
   });
 });
