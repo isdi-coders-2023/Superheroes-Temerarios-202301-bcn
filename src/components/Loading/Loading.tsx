@@ -5,6 +5,7 @@ const Loading = (): JSX.Element => {
     <LoadingStyled
       aria-label="the page is loading"
       className="loader"
+      role="dialog"
     ></LoadingStyled>
   );
 };
