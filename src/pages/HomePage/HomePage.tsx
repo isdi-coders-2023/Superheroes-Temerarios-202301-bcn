@@ -4,7 +4,11 @@ import Loading from "../../components/Loading/Loading";
 const HomePage = (): JSX.Element => {
   return (
     <>
-      <Button className="button" content="+" />
+      <Button
+        aria-label="add-button"
+        className="button"
+        content=<i className="fa-solid fa-plus"></i>
+      />
       <Loading />
     </>
   );

@@ -1,3 +1,4 @@
+import SearchBar from "../SearchBar/SearchBar";
 import HeaderStyled from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
@@ -10,6 +11,7 @@ const Header = (): JSX.Element => {
           <h2>Eat. Code. Repeat.</h2>
         </div>
       </div>
+      <SearchBar />
       <nav>
         <a href="home">Home</a>
         <a href="Favourites">Favourites</a>
