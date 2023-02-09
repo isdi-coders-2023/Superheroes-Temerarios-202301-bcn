@@ -4,6 +4,13 @@ export interface RecipeListStructure {
   _links: LinksStructure;
   hits: HitStructure[];
 }
+export interface CardProps {
+  image: string;
+  name: string;
+  category: string;
+  calories: string;
+  totalTime: string;
+}
 
 export interface HitStructure {
   recipe: RecipeStructure;
