@@ -11,8 +11,8 @@ const Header = (): JSX.Element => {
         </div>
       </div>
       <nav>
-        <a href=" ">Home</a>
-        <a href=" ">Favourites</a>
+        <a href="home">Home</a>
+        <a href="Favourites">Favourites</a>
       </nav>
     </HeaderStyled>
   );
