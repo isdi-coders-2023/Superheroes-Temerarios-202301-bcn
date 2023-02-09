@@ -8,7 +8,7 @@ export const useApiRequest = () => {
 
   const getApiRecipes = useCallback(async () => {
     try {
-      const list = await fetch(`${process.env.REACT_APP_HACKANDEAT_URL!}`);
+      const list = await fetch(process.env.REACT_APP_HACKANDEAT_URL!);
       const response = (await list.json()) as RecipeListStructure;
 
       dispatch(loadRecipesActionCreator(response.hits));

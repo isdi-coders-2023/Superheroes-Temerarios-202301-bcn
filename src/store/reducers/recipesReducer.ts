@@ -11,12 +11,10 @@ const recipesReducer = (
 ): HitsStructure => {
   let newRecipes: HitsStructure;
 
-  switch (action.type) {
-    case RecipesActionType.loadRecipes:
-      newRecipes = [...(action as LoadRecipesAction).payload];
-      break;
-    default:
-      newRecipes = currentRecipes;
+  if (action.type === RecipesActionType.loadRecipes) {
+    newRecipes = [...(action as LoadRecipesAction).payload];
+  } else {
+    newRecipes = currentRecipes;
   }
 
   return newRecipes;
