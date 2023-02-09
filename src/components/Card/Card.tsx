@@ -1,31 +1,17 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import React from "react";
+import { CardProps } from "../../data/types";
 import { CardStyled } from "./CardStyled";
 
-export interface CardProps {
-  image: string;
-  name: string;
-  category: string;
-  infoLeft?: string;
-  infoRight?: string;
-}
-
-export const Card = ({
+const Card = ({
   image,
   name,
   category,
-  infoLeft,
-  infoRight,
-}: CardProps) => {
+  calories,
+  totalTime,
+}: CardProps): JSX.Element => {
   return (
     <CardStyled className="recipe-card">
-      <img
-        src={image}
-        alt={name}
-        width="300"
-        height="320"
-        className="recipe-card__image"
-      ></img>
+      <img src={image} alt={name} className="image"></img>
 
       <div className="info">
         <div className="info__name">
@@ -39,17 +25,19 @@ export const Card = ({
         </div>
 
         <div className="info__stats">
-          <div className="info__stats-kcal">
-            <span className="stats__left">{infoLeft}</span>
-            <i className="fa-regular fa-heart"></i>
+          <div className="info__stats_kcal">
+            <span className="kcal">{calories}</span>
+            <i className="fa-regular fa-heart fa-2x"></i>
             <div />
           </div>
-          <div className="info__stats-minutes">
+          <div className="info__stats_minutes">
             <i className="fa-regular fa-clock"></i>
-            <span className="stats__right">{infoRight}</span>
+            <span className="minutes">{totalTime}</span>
           </div>
         </div>
       </div>
     </CardStyled>
   );
 };
+
+export default Card;
