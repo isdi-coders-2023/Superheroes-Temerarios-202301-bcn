@@ -18,9 +18,9 @@ jobs:
       - name: Coverage
         run: npm run test:coverage
         env:
-          REACT_APP_HACKANDEAT_URL: ${{ https://api.edamam.com/api/recipes/v2 }}
-          REACT_APP_API_PARAMS: ${{ field=label&field=image&imageSize=REGULAR&field=foodId&field=dishType&field=calories&field=cuisineType&field=totalNutrients&app_id=3ecd7851&type=public }}
-          REACT_APP_API_KEY: ${{ 498953c8163cbec03246cd4914d809ec }}
+          REACT_APP_HACKANDEAT_URL: ${{ secrets.REACT_APP_HACKANDEAT_URL }}
+          REACT_APP_API_PARAMS: ${{ secrets.REACT_APP_API_PARAMS }}
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
