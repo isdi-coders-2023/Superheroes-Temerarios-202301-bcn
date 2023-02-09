@@ -12,7 +12,7 @@ const Header = (): JSX.Element => {
       </div>
       <nav>
         <a href="home">Home</a>
-        <a href="Favourites">Favourites</a>
+        <a href="favourites">Favourites</a>
       </nav>
     </HeaderStyled>
   );
