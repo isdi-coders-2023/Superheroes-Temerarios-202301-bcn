@@ -1,9 +1,11 @@
 @import "/node_modules/@fontsource/barlow/400.css";
 @import "/node_modules/@fontsource/barlow/800.css";
+@import "/node_modules/@fontsource/barlow/700.css";
 
 html,
 body {
   width: 100vw;
+  font-family: barlow, sans-serif;
 }
 
 body {
