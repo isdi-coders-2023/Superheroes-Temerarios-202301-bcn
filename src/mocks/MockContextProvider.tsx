@@ -1,14 +1,10 @@
-import { HitsStructure } from "../data/types";
-import RecipesContext from "../store/contexts/recipes/RecipesContext";
+import RecipesContext, {
+  RecipesContextStructure,
+} from "../store/contexts/recipes/RecipesContext";
 
 interface MockContextProviderProps {
   children: JSX.Element | JSX.Element[];
-  mockStore: RecipeStructure;
-}
-
-interface RecipeStructure {
-  dispatch: React.Dispatch<any>;
-  recipes: HitsStructure;
+  mockStore: RecipesContextStructure;
 }
 
 const MockContextProvider = ({

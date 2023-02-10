@@ -5,8 +5,10 @@ const apiKey = process.env.REACT_APP_API_KEY!;
 const apiParams = process.env.REACT_APP_API_PARAMS!;
 
 export const handlers = [
-  rest.get(apiUrl, (req, res, ctx) => {
-    const queryParams = req.url.searchParams.getAll(`${apiParams}${apiKey}`);
-    return res(ctx.status(200), ctx.json(queryParams));
+  rest.get(`${apiUrl}${apiKey}${apiParams}`, (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({ from: 2, to: 2, _links: { next: { href: "" } }, hits: [] })
+    );
   }),
 ];
