@@ -1,5 +1,5 @@
 import { HitsStructure } from "../../../data/types";
-import { loadRecipesActionCreator } from "./recipesActionCreators";
+import { loadRecipesActionCreator } from "./recipesActionCreator";
 import { RecipesActionType } from "./types";
 
 describe("Given a recipesActionCreators function", () => {
