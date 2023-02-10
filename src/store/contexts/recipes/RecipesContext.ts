@@ -1,12 +1,14 @@
 import { createContext } from "react";
-import { HitsStructure } from "../../../data/types";
+import { RecipeListStructure } from "../../../data/types";
 import { RecipeAction } from "../../actions/recipes/types";
 
-interface RecipesContextStructure {
-  recipes: HitsStructure;
+export interface RecipesContextStructure {
+  recipes: RecipeListStructure;
   dispatch: React.Dispatch<RecipeAction>;
 }
 
-const RecipesContext = createContext({} as RecipesContextStructure);
+const RecipesContext = createContext<RecipesContextStructure>(
+  {} as RecipesContextStructure
+);
 
 export default RecipesContext;
