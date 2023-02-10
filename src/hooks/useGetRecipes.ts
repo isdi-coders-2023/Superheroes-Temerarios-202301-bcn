@@ -1,6 +1,6 @@
 import { useCallback, useContext } from "react";
 import { RecipeListStructure } from "../data/types";
-import { loadRecipesActionCreator } from "../store/actions/recipes/recipesActionCreators";
+import { loadRecipesActionCreator } from "../store/actions/recipes/recipesActionCreator";
 import RecipesContext from "../store/contexts/recipes/RecipesContext";
 
 export const useApiRequest = () => {
