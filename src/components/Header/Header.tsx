@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import HeaderStyled from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
@@ -11,8 +12,8 @@ const Header = (): JSX.Element => {
         </div>
       </div>
       <nav>
-        <a href="home">Home</a>
-        <a href="favourites">Favourites</a>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/favourites">Favourites</NavLink>
       </nav>
     </HeaderStyled>
   );
