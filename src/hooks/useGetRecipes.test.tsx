@@ -1,12 +1,15 @@
 import useApiRequest from "./useGetRecipes";
 import { renderHook, waitFor } from "@testing-library/react";
-import { mockDispatch, mockStore } from "../mocks/mockStore";
+import {
+  mockDispatch,
+  mockLoadRecipesAction,
+  mockStore,
+} from "../mocks/mockStore";
 import MockContextProvider from "../mocks/MockContextProvider";
 
 describe("Given a useApiRequest function", () => {
   describe("When it receives a list of recipes", () => {
     test("Then it should return a recipes with type 'hitsStructure'", async () => {
-      const dispatch = mockDispatch;
       const store = mockStore;
       const {
         result: {
@@ -24,7 +27,7 @@ describe("Given a useApiRequest function", () => {
 
       await waitFor(async () => getApiRecipes());
 
-      expect(dispatch).toHaveBeenCalled();
+      expect(mockDispatch).toHaveBeenCalledWith(mockLoadRecipesAction);
     });
   });
 });

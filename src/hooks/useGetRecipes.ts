@@ -3,18 +3,21 @@ import { RecipeListStructure } from "../data/types";
 import { loadRecipesActionCreator } from "../store/actions/recipes/recipesActionCreator";
 import RecipesContext from "../store/contexts/recipes/RecipesContext";
 
-export const useApiRequest = () => {
+const apiUrl = process.env.REACT_APP_HACKANDEAT_URL!;
+const apiParams = process.env.REACT_APP_PARAMS!;
+const apiKey = process.env.REACT_APP_API_KEY!;
+const dietParam = process.env.REACT_APP_DIET_PARAM!;
+
+const useApiRequest = () => {
   const { dispatch } = useContext(RecipesContext);
 
   const getApiRecipes = useCallback(async () => {
-    try {
-      const list = await fetch(process.env.REACT_APP_HACKANDEAT_URL!);
-      const response = (await list.json()) as RecipeListStructure;
+    const listResponse = await fetch(
+      `${apiUrl}${apiParams}${apiKey}${dietParam}`
+    );
 
-      dispatch(loadRecipesActionCreator(response.hits));
-    } catch (error) {
-      return (error as Error).message;
-    }
+    const result = (await listResponse.json()) as RecipeListStructure;
+    dispatch(loadRecipesActionCreator(result));
   }, [dispatch]);
 
   return { getApiRecipes };
