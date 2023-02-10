@@ -14,7 +14,7 @@ const Header = (): JSX.Element => {
       <SearchBar />
       <nav>
         <a href="home">Home</a>
-        <a href="Favourites">Favourites</a>
+        <a href="favourites">Favourites</a>
       </nav>
     </HeaderStyled>
   );

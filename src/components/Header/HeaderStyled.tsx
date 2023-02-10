@@ -4,7 +4,7 @@ const HeaderStyled = styled.header`
   background-color: #1f1d2b;
   height: 150px;
   color: white;
-  font-size: 25px;
+  font-size: 30px;
   border-bottom: 3px solid #2edb73;
   display: flex;
   flex-direction: row;
@@ -16,6 +16,7 @@ const HeaderStyled = styled.header`
   nav {
     display: flex;
     gap: 20px;
+    font-size: 24px;
   }
 
   .side-header {
@@ -28,6 +29,7 @@ const HeaderStyled = styled.header`
     flex-direction: column;
     align-items: start;
     font-size: 24px;
+    font-weight: 400;
     color: #2edb73;
   }
 
