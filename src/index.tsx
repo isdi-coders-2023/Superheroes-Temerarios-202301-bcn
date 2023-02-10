@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import RecipesContextProvider from "./store/contexts/recipes/RecipesContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RecipesContextProvider>
+      <RouterProvider router={router} />
+    </RecipesContextProvider>
   </React.StrictMode>
 );
