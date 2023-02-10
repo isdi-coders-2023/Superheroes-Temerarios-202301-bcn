@@ -14,7 +14,7 @@ const SearchBar = (): JSX.Element => {
       <Button
         aria-label="search"
         className="button-submit"
-        content=<i className="fa-solid fa-arrow-right"></i>
+        content={<i className="fa-solid fa-arrow-right"></i>}
       />
     </SearchBarStyled>
   );
