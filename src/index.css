@@ -11,6 +11,8 @@ body {
 body {
   background-color: #393c49;
   margin: 0;
+  font-family: barlow, sans-serif;
+  color: #fff;
 }
 
 h1,

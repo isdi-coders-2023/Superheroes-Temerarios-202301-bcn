@@ -47,7 +47,7 @@ const HeaderStyled = styled.header`
     width: 150;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1100px) {
     padding-left: 40px;
     padding-right: 40px;
     font-size: 30px;
