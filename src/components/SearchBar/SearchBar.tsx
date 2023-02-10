@@ -5,7 +5,12 @@ import SearchBarStyled from "./SearchBarStyled";
 const SearchBar = (): JSX.Element => {
   return (
     <SearchBarStyled>
-      <input className="searchbar" placeholder="Find your recipe"></input>
+      <input
+        aria-label="search-input"
+        type="text"
+        className="searchbar"
+        placeholder="Find your recipe"
+      ></input>
       <Button
         aria-label="search"
         className="button-submit"
