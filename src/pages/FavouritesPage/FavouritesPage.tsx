@@ -1,9 +1,7 @@
+import FavouritesPageStyled from "./FavouritesPageStyled";
+
 const FavouritesPage = (): JSX.Element => {
-  return (
-    <>
-      <h1>Your Favorite Recipes</h1>
-    </>
-  );
+  return <FavouritesPageStyled>Your Favorite Recipes</FavouritesPageStyled>;
 };
 
 export default FavouritesPage;
