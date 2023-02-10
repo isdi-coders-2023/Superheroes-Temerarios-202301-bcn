@@ -33,12 +33,13 @@ const HeaderStyled = styled.header`
     flex-direction: column;
     align-items: start;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 00;
     color: #2edb73;
   }
 
   .title-container h1 {
     align-items: start;
+    font-weight: bold;
   }
 
   .logo {
