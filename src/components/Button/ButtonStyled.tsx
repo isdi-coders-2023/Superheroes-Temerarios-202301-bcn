@@ -8,6 +8,13 @@ const ButtonStyled = styled.button`
   border-radius: 10px;
   font-size: 45px;
   font-weight: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `;
 
 export default ButtonStyled;
