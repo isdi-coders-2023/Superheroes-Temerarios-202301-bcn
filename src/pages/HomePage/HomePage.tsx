@@ -6,7 +6,7 @@ const HomePage = (): JSX.Element => {
     <>
       <Button
         aria-label="add-button"
-        className="button"
+        className="add-button"
         content=<i className="fa-solid fa-plus"></i>
       />
       <Loading />
