@@ -23,8 +23,8 @@ const HomePage = (): JSX.Element => {
         className="button-add"
         content={<i className="fa-solid fa-plus"></i>}
       />
-      {/* {hits.length ? <CardList recipes={hits} /> : <Loading />}
-       */}
+
+      {hits.length ? <CardList recipes={hits} /> : <Loading />}
     </>
   );
 };
