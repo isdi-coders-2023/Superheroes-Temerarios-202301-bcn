@@ -19,7 +19,7 @@ const HomePage = (): JSX.Element => {
 
   return (
     <HomePageStyled>
-      <h2>What do you want to eat?</h2>
+      <h2 className="heading">What do you want to eat?</h2>
       <SearchBar />
       <Button
         aria-label="add-button"
