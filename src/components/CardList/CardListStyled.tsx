@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
 const CardListStyled = styled.ul`
-  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  @media (min-width: 600px) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-direction: row;
-    min-width: 500px;
-  }
-  .meal-list {
+  gap: 3rem;
+
+  .li {
+    margin: 40px 10px 280px 15px;
     padding: 0;
+    list-style: none;
   }
 `;
 
