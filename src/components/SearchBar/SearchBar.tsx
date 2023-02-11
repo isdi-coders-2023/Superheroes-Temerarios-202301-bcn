@@ -10,6 +10,7 @@ const SearchBar = (): JSX.Element => {
         type="text"
         className="searchbar"
         placeholder="Find your recipe"
+        autoFocus
       ></input>
       <Button
         aria-label="search"
