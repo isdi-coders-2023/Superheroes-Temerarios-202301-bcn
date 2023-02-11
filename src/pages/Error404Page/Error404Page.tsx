@@ -1,7 +1,7 @@
-import Error404 from "../../components/Error404/Error404";
+import ErrorFourOFour from "../../components/ErrorFourOFour/ErrorFourOFour";
 
-const Error404Page = () => {
-  return <Error404 />;
+const ErrorFourOFourPage = () => {
+  return <ErrorFourOFour />;
 };
 
-export default Error404Page;
+export default ErrorFourOFourPage;
