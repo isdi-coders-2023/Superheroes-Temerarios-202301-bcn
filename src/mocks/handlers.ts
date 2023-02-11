@@ -1,12 +1,13 @@
 import { rest } from "msw";
 
-const apiUrl = process.env.REACT_APP_HACKANDEAT_URL!;
+const apiUrl = process.env.REACT_APP_HACKANDEAT_URL;
+const apiParams = process.env.REACT_APP_PARAMS;
 const apiKey = process.env.REACT_APP_API_KEY!;
-const apiParams = process.env.REACT_APP_API_PARAMS!;
+const dietParam = process.env.REACT_APP_DIET_PARAM;
 
 export const handlers = [
-  rest.get(apiUrl, (req, res, ctx) => {
-    const queryParams = req.url.searchParams.getAll(`${apiParams}${apiKey}`);
+  rest.get(`${apiUrl}${apiParams}${apiKey}${dietParam}`, (req, res, ctx) => {
+    const queryParams = req.url.searchParams.getAll(apiKey);
     return res(ctx.status(200), ctx.json(queryParams));
   }),
 ];

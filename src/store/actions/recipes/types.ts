@@ -1,4 +1,4 @@
-import { HitsStructure } from "../../../data/types";
+import { RecipeListStructure } from "../../../data/types";
 
 export enum RecipesActionType {
   loadRecipes,
@@ -12,5 +12,5 @@ export interface RecipeAction {
 
 export interface LoadRecipesAction extends RecipeAction {
   type: RecipesActionType.loadRecipes;
-  payload: HitsStructure;
+  payload: RecipeListStructure;
 }

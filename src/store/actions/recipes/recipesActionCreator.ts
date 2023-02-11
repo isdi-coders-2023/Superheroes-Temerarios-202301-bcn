@@ -1,8 +1,8 @@
-import { HitsStructure } from "../../../data/types";
+import { RecipeListStructure } from "../../../data/types";
 import { LoadRecipesAction, RecipesActionType } from "./types";
 
 export const loadRecipesActionCreator = (
-  recipesList: HitsStructure
+  recipesList: RecipeListStructure
 ): LoadRecipesAction => ({
   type: RecipesActionType.loadRecipes,
   payload: recipesList,

@@ -1,27 +1,29 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { CardProps } from "../../data/types";
+import { HitStructure } from "../../data/types";
 import { CardStyled } from "./CardStyled";
 
+interface CardProps {
+  recipe: HitStructure;
+}
+
 const Card = ({
-  image,
-  name,
-  category,
-  calories,
-  totalTime,
+  recipe: {
+    recipe: { calories, cuisineType, image, label, totalTime },
+  },
 }: CardProps): JSX.Element => {
   return (
     <CardStyled className="recipe-card">
-      <img src={image} alt={name} className="image"></img>
+      <img src={image} alt={label} className="image"></img>
 
       <div className="info">
         <div className="info__name">
-          <span role="definition" aria-label={name} className="name__tittle">
-            {name}
+          <span role="definition" aria-label={label} className="name__tittle">
+            {label}
           </span>
         </div>
 
         <div className="info__category">
-          <span className="category__tittle">{category}</span>
+          <span className="category__tittle">{cuisineType}</span>
         </div>
 
         <div className="info__stats">

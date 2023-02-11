@@ -1,4 +1,4 @@
-import { HitsStructure } from "../../data/types";
+import { RecipeListStructure } from "../../data/types";
 import {
   LoadRecipesAction,
   RecipeAction,
@@ -6,16 +6,15 @@ import {
 } from "../actions/recipes/types";
 
 const recipesReducer = (
-  currentRecipes: HitsStructure,
+  currentRecipes: RecipeListStructure,
   action: RecipeAction
-): HitsStructure => {
-  let newRecipes: HitsStructure;
+): RecipeListStructure => {
+  let newRecipes: RecipeListStructure;
 
   if (action.type === RecipesActionType.loadRecipes) {
-    newRecipes = [...(action as LoadRecipesAction).payload];
-  } else {
-    newRecipes = currentRecipes;
+    return (newRecipes = { ...(action as LoadRecipesAction).payload });
   }
+  newRecipes = currentRecipes;
 
   return newRecipes;
 };

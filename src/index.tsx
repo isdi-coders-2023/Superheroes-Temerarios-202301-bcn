@@ -5,6 +5,7 @@ import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import FavouritesPage from "./pages/FavouritesPage/FavouritesPage";
+import RecipesContextProvider from "./store/contexts/recipes/RecipesContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RecipesContextProvider>
+      <RouterProvider router={router} />
+    </RecipesContextProvider>
   </React.StrictMode>
 );
