@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import Button from "../../components/Button/Button";
 import CardList from "../../components/CardList/CardList";
-import Loading from "../../components/Loading/Loading";
 import useApiRequest from "../../hooks/useGetRecipes";
 import RecipesContext from "../../store/contexts/recipes/RecipesContext";
 
@@ -24,7 +23,7 @@ const HomePage = (): JSX.Element => {
         content={<i className="fa-solid fa-plus"></i>}
       />
 
-      {hits.length ? <CardList recipes={hits} /> : <Loading />}
+      {hits && <CardList recipes={hits} />}
     </>
   );
 };
