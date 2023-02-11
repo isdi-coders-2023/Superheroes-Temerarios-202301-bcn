@@ -8,7 +8,7 @@ export const CardStyled = styled.article`
   background-color: #1f1d2b;
   text-align: center;
   color: #ffff;
-  margin: 80px 10px -10px 32px;
+  margin: 80px 10px -10px 15px;
 
   .image {
     height: 180px;
@@ -42,7 +42,7 @@ export const CardStyled = styled.article`
       font-size: 20px;
       padding: 0 20px 0 20px;
       gap: 130px;
-      padding-top: 20px;
+      padding-top: 30px;
 
       .fa-heart {
         box-sizing: border-box;
@@ -53,7 +53,7 @@ export const CardStyled = styled.article`
         transition: color 0.5s;
       }
 
-      .fa-heart:hover {
+      .fa-heart:active {
         color: red;
         font-size: 2.55rem;
       }
@@ -68,7 +68,7 @@ export const CardStyled = styled.article`
 
         .fa-clock {
           position: absolute;
-          right: 40px;
+          right: 60px;
           align-self: center;
         }
       }
