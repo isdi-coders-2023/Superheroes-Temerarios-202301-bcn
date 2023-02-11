@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 const ButtonStyled = styled.button`
   background-color: #2edb73;
-  width: ${(props) => (props.className === "button-add" ? "55px" : "43px")};
-  height: ${(props) => (props.className === "button-add" ? "55px" : "43px")};
+  width: ${(props) => (props.className === "button-add" ? "55px" : "50px")};
+  height: ${(props) => (props.className === "button-add" ? "55px" : "50px")};
   border: none;
   border-radius: 10px;
   font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: ${(props) =>
+    props.className === "button-add" ? "fixed" : "inherit"};
+  margin-top: 23px;
   bottom: 20px;
   right: 20px;
   cursor: pointer;

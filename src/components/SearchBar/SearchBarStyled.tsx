@@ -6,12 +6,12 @@ const SearchBarStyled = styled.div`
 
   .searchbar {
     box-sizing: border-box;
-    height: 43px;
-    width: 300px;
+    height: 50px;
+    width: 279px;
     padding: 0;
     padding-left: 15px;
     font-family: inherit;
-    background-color: #393c49;
+    background-color: #1f1d2b;
     border: none;
     outline: none;
     border-radius: 10px;

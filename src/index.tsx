@@ -4,13 +4,17 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import FavouritesPage from "./pages/FavouritesPage/FavouritesPage";
 import RecipesContextProvider from "./store/contexts/recipes/RecipesContextProvider";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{ path: "/", element: <HomePage /> }],
+    children: [
+      { path: "/home", element: <HomePage /> },
+      { path: "/favourites", element: <FavouritesPage /> },
+    ],
   },
 ]);
 

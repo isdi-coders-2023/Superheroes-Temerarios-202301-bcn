@@ -1,4 +1,4 @@
-import SearchBar from "../SearchBar/SearchBar";
+import { NavLink } from "react-router-dom";
 import HeaderStyled from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
@@ -11,10 +11,9 @@ const Header = (): JSX.Element => {
           <h2>Eat. Code. Repeat.</h2>
         </div>
       </div>
-      <SearchBar />
       <nav>
-        <a href="home">Home</a>
-        <a href="favourites">Favourites</a>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/favourites">Favourites</NavLink>
       </nav>
     </HeaderStyled>
   );
