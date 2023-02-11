@@ -12,12 +12,16 @@ const useApiRequest = () => {
   const { dispatch } = useContext(RecipesContext);
 
   const getApiRecipes = useCallback(async () => {
-    const listResponse = await fetch(
-      `${apiUrl}${apiParams}${apiKey}${dietParam}`
-    );
+    try {
+      const listResponse = await fetch(
+        `${apiUrl}${apiParams}${apiKey}${dietParam}`
+      );
 
-    const result = (await listResponse.json()) as RecipeListStructure;
-    dispatch(loadRecipesActionCreator(result));
+      const result = (await listResponse.json()) as RecipeListStructure;
+      dispatch(loadRecipesActionCreator(result));
+    } catch (error) {
+      return (error as Error).message;
+    }
   }, [dispatch]);
 
   return { getApiRecipes };
