@@ -28,13 +28,13 @@ const Card = ({
 
         <div className="info__stats">
           <div className="info__stats_kcal">
-            <span className="kcal">{calories.toFixed(2)}</span>
+            <span className="kcal">{calories.toFixed(2)}Kcal</span>
             <i className="fa-regular fa-heart fa-2x"></i>
             <div />
           </div>
           <div className="info__stats_minutes">
             <i className="fa-regular fa-clock"></i>
-            <span className="minutes">{totalTime}</span>
+            <span className="minutes">{totalTime}min</span>
           </div>
         </div>
       </div>
