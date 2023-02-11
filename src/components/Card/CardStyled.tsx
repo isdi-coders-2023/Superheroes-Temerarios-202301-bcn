@@ -4,12 +4,11 @@ export const CardStyled = styled.article`
   box-sizing: border-box;
   height: 300px;
   width: 320px;
-  border: 2px black solid;
   border-radius: 15px;
   background-color: #1f1d2b;
-  position: absolute;
   text-align: center;
   color: #ffff;
+  margin: 80px 10px -10px 32px;
 
   .image {
     height: 180px;
@@ -20,10 +19,13 @@ export const CardStyled = styled.article`
   }
 
   .info {
+    display: flex;
+    flex-direction: column;
     bottom: 55px;
     padding-top: 10px;
     position: relative;
     &__name {
+      padding: 0 10px;
       font-weight: 600;
       font-size: 24px;
       padding-bottom: 5px;
@@ -32,7 +34,6 @@ export const CardStyled = styled.article`
     &__category {
       font-weight: 400;
       font-size: 20px;
-      margin-bottom: 25px;
     }
 
     &__stats {
@@ -57,12 +58,6 @@ export const CardStyled = styled.article`
         font-size: 2.55rem;
       }
 
-      .fa-clock {
-      }
-
-      &_kcal {
-      }
-
       &_minutes {
         display: flex;
         position: relative;
@@ -73,7 +68,7 @@ export const CardStyled = styled.article`
 
         .fa-clock {
           position: absolute;
-          right: 60px;
+          right: 40px;
           align-self: center;
         }
       }
