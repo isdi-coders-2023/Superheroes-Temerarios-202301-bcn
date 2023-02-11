@@ -14,8 +14,8 @@ const CardList = ({ recipes }: CardListProps): JSX.Element => {
   return (
     <CardListStyled className="recipe-list">
       {recipes.map((recipe) => (
-        <li>
-          <Card recipe={recipe} key={recipe.recipe.label.length}></Card>
+        <li key={recipe.recipe.label.length + recipe.recipe.calories}>
+          <Card recipe={recipe}></Card>
         </li>
       ))}
     </CardListStyled>
