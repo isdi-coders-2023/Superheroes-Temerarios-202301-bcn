@@ -1,8 +1,8 @@
-import Error404Styled from "./Error404Styled";
+import ErrorFourOFourStyled from "./ErrorFourOFourStyled";
 
-const Error404 = (): JSX.Element => {
+const ErrorFourOFour = (): JSX.Element => {
   return (
-    <Error404Styled className="error404">
+    <ErrorFourOFourStyled className="error404">
       <span className="error404__title">Page not found</span>
       <span className="error404__number">404</span>
       <img
@@ -10,8 +10,8 @@ const Error404 = (): JSX.Element => {
         alt="Error. Page not found."
         src="/img/error404Icon.png"
       />
-    </Error404Styled>
+    </ErrorFourOFourStyled>
   );
 };
 
-export default Error404;
+export default ErrorFourOFour;

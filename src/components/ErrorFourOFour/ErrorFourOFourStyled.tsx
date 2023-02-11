@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Error404Styled = styled.div`
+const ErrorFourOFourStyled = styled.div`
   margin-top: 500px;
   display: flex;
   flex-direction: column;
@@ -31,4 +31,4 @@ const Error404Styled = styled.div`
   }
 `;
 
-export default Error404Styled;
+export default ErrorFourOFourStyled;
