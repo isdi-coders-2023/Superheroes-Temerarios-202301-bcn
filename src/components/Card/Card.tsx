@@ -28,7 +28,7 @@ const Card = ({
 
         <div className="info__stats">
           <div className="info__stats_kcal">
-            <span className="kcal">{calories}</span>
+            <span className="kcal">{calories.toFixed(2)}</span>
             <i className="fa-regular fa-heart fa-2x"></i>
             <div />
           </div>
