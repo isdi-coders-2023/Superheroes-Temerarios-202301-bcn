@@ -5,6 +5,8 @@ const HomePageStyled = styled.main`
   font-size: 24px;
   font-weight: normal;
   margin-top: 65px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   div {
     display: flex;

@@ -6,14 +6,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import FavouritesPage from "./pages/FavouritesPage/FavouritesPage";
 import RecipesContextProvider from "./store/contexts/recipes/RecipesContextProvider";
+import Error404Page from "./pages/Error404Page/Error404Page";
+import Header from "./components/Header/Header";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: (
+      <>
+        <Header />
+        <Error404Page />
+      </>
+    ),
     children: [
-      { path: "/home", element: <HomePage /> },
-      { path: "/favourites", element: <FavouritesPage /> },
+      { path: "/", element: <HomePage /> },
+      { path: "favourites", element: <FavouritesPage /> },
     ],
   },
 ]);
