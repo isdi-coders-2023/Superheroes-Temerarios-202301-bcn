@@ -8,6 +8,7 @@ import FavouritesPage from "./pages/FavouritesPage/FavouritesPage";
 import RecipesContextProvider from "./store/contexts/recipes/RecipesContextProvider";
 import Error404Page from "./pages/Error404Page/Error404Page";
 import Header from "./components/Header/Header";
+import FormPage from "./pages/FormPage/FormPage";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "favourites", element: <FavouritesPage /> },
+      { path: "form", element: <FormPage /> },
     ],
   },
 ]);

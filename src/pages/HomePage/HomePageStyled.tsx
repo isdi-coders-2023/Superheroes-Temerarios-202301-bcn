@@ -15,6 +15,11 @@ const HomePageStyled = styled.main`
   div input {
     margin-top: 24px;
   }
+
+  .search-container {
+    display: flex;
+    gap: 20px;
+  }
 `;
 
 export default HomePageStyled;
