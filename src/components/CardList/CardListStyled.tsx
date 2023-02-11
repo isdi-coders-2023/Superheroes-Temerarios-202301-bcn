@@ -5,6 +5,7 @@ const CardListStyled = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
+  padding-top: 80px;
 `;
 
 export default CardListStyled;
