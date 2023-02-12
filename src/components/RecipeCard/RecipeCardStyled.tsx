@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardStyled = styled.article`
+export const RecipeCardStyled = styled.article`
   box-sizing: border-box;
   height: 300px;
   width: 320px;
