@@ -43,11 +43,7 @@ describe("Given a CardList component", () => {
         },
       ];
 
-      render(
-        <BrowserRouter>
-          <RecipeCardList recipes={recipes} />
-        </BrowserRouter>
-      );
+      render(<RecipeCardList recipes={recipes} />);
 
       const cardList = screen.getByRole("list");
 
