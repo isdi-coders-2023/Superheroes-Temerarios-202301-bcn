@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { HitsStructure } from "../../data/types";
 import RecipesContext from "../../store/contexts/recipes/RecipesContext";
 import RecipeCard from "../RecipeCard/RecipeCard";
@@ -15,7 +16,9 @@ const RecipeCardList = ({ recipes }: RecipeCardListProps): JSX.Element => {
     <RecipeCardListStyled className="recipe-list">
       {recipes.map((recipe) => (
         <li key={recipe.recipe.label.length + recipe.recipe.calories}>
-          <RecipeCard recipe={recipe}></RecipeCard>
+          <Link to="/form">
+            <RecipeCard recipe={recipe}></RecipeCard>
+          </Link>
         </li>
       ))}
     </RecipeCardListStyled>

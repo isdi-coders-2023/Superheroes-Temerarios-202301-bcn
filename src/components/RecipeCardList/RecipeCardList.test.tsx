@@ -1,6 +1,7 @@
 import RecipeCardList from "./RecipeCardList";
 import { render, screen } from "@testing-library/react";
 import { HitsStructure } from "../../data/types";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Given a CardList component", () => {
   describe("When rendered", () => {
@@ -42,7 +43,11 @@ describe("Given a CardList component", () => {
         },
       ];
 
-      render(<RecipeCardList recipes={recipes} />);
+      render(
+        <BrowserRouter>
+          <RecipeCardList recipes={recipes} />
+        </BrowserRouter>
+      );
 
       const cardList = screen.getByRole("list");
 
