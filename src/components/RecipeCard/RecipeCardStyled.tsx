@@ -53,7 +53,7 @@ export const RecipeCardStyled = styled.article`
         transition: color 0.5s;
       }
 
-      .fa-heart:active {
+      .active {
         color: red;
         font-size: 2.55rem;
       }
