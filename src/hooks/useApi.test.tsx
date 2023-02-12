@@ -1,4 +1,4 @@
-import useApiRequest from "./useGetRecipes";
+import useApi from "./useApi";
 import { renderHook, waitFor } from "@testing-library/react";
 import { mockDispatch, mockStore } from "../mocks/mockStore";
 import MockContextProvider from "../mocks/MockContextProvider";
@@ -15,7 +15,7 @@ describe("Given a useApiRequest function", () => {
         result: {
           current: { getApiRecipes },
         },
-      } = renderHook(() => useApiRequest(), {
+      } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
             <MockContextProvider mockStore={store}>
@@ -38,7 +38,7 @@ describe("Given a useApiRequest function", () => {
         result: {
           current: { getApiRecipes },
         },
-      } = renderHook(() => useApiRequest(), {
+      } = renderHook(() => useApi(), {
         wrapper: ({ children }) => {
           return (
             <MockContextProvider mockStore={store}>

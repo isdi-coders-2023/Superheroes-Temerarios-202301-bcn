@@ -8,7 +8,7 @@ const apiParams = process.env.REACT_APP_PARAMS!;
 const apiKey = process.env.REACT_APP_API_KEY!;
 const dietParam = process.env.REACT_APP_DIET_PARAM!;
 
-const useApiRequest = () => {
+const useApi = () => {
   const { dispatch } = useContext(RecipesContext);
 
   const getApiRecipes = useCallback(async () => {
@@ -27,4 +27,4 @@ const useApiRequest = () => {
   return { getApiRecipes };
 };
 
-export default useApiRequest;
+export default useApi;
