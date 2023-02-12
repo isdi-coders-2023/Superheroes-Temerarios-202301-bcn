@@ -1,9 +1,9 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import CardList from "../../components/CardList/CardList";
+import RecipeCardList from "../../components/RecipeCardList/RecipeCardList";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import useApiRequest from "../../hooks/useGetRecipes";
+import useApi from "../../hooks/useApi";
 import RecipesContext from "../../store/contexts/recipes/RecipesContext";
 import HomePageStyled from "./HomePageStyled";
 
@@ -12,7 +12,7 @@ const HomePage = (): JSX.Element => {
     recipes: { hits },
   } = useContext(RecipesContext);
 
-  const { getApiRecipes } = useApiRequest();
+  const { getApiRecipes } = useApi();
 
   useEffect(() => {
     getApiRecipes();
@@ -40,7 +40,7 @@ const HomePage = (): JSX.Element => {
           className="button-add"
           content={<i className="fa-solid fa-plus"></i>}
         />
-        <CardList recipes={hits} />
+        <RecipeCardList recipes={hits} />
       </Link>
     </HomePageStyled>
   );

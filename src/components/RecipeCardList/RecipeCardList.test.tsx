@@ -1,4 +1,4 @@
-import CardList from "./CardList";
+import RecipeCardList from "./RecipeCardList";
 import { render, screen } from "@testing-library/react";
 import { HitsStructure } from "../../data/types";
 
@@ -42,7 +42,7 @@ describe("Given a CardList component", () => {
         },
       ];
 
-      render(<CardList recipes={recipes} />);
+      render(<RecipeCardList recipes={recipes} />);
 
       const cardList = screen.getByRole("list");
 

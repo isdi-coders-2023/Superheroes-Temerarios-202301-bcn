@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { HitStructure } from "../../data/types";
-import Card from "./Card";
+import RecipeCard from "./RecipeCard";
 
 describe("Given a Card component", () => {
   describe("When rendered", () => {
@@ -40,14 +40,14 @@ describe("Given a Card component", () => {
     };
 
     test("Then it should show an image", () => {
-      render(<Card recipe={fakeRecipe} />);
+      render(<RecipeCard recipe={fakeRecipe} />);
       const imageRecipe = screen.getByRole("img");
 
       expect(imageRecipe).toBeInTheDocument();
     });
 
     test("Then it should show text with the name Patatetas", () => {
-      render(<Card recipe={fakeRecipe} />);
+      render(<RecipeCard recipe={fakeRecipe} />);
       const expectedText = "Patatetas";
 
       const textResult = screen.getByText(expectedText);

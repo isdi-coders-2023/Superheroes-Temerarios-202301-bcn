@@ -12,8 +12,10 @@ const recipesReducer = (
   let newRecipes: RecipeListStructure;
 
   if (action.type === RecipesActionType.loadRecipes) {
-    return (newRecipes = { ...(action as LoadRecipesAction).payload });
+    newRecipes = { ...(action as LoadRecipesAction).payload };
+    return newRecipes;
   }
+
   newRecipes = currentRecipes;
 
   return newRecipes;
