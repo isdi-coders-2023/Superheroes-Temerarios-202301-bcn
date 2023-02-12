@@ -1,4 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useState } from "react";
 import { HitStructure } from "../../data/types";
 import { RecipeCardStyled } from "./RecipeCardStyled";
 
@@ -11,6 +12,12 @@ const RecipeCard = ({
     recipe: { calories, cuisineType, image, label, totalTime },
   },
 }: RecipeCardProps): JSX.Element => {
+  const [isActive, setIsActive] = useState(false);
+
+  const isFavorite = (event: any) => {
+    setIsActive((current) => !current);
+  };
+
   return (
     <RecipeCardStyled className="recipe-card">
       <img src={image} alt={label} className="image"></img>
@@ -29,7 +36,14 @@ const RecipeCard = ({
         <div className="info__stats">
           <div className="info__stats_kcal">
             <span className="kcal">{calories.toFixed(2)}Kcal</span>
-            <i className="fa-regular fa-heart fa-2x"></i>
+            <i
+              onClick={isFavorite}
+              className={
+                isActive
+                  ? "fa-regular fa-heart fa-2x active"
+                  : "fa-regular fa-heart fa-2x"
+              }
+            ></i>
             <div />
           </div>
           <div className="info__stats_minutes">
