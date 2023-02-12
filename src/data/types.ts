@@ -13,6 +13,12 @@ export interface CardProps {
   totalTime: string;
 }
 
+export interface ButtonProps {
+  className: string;
+  content: JSX.Element;
+  "aria-label": string;
+}
+
 export interface HitStructure {
   recipe: RecipeStructure;
 }
