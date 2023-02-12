@@ -1,10 +1,5 @@
+import { ButtonProps } from "../../data/types";
 import ButtonStyled from "./ButtonStyled";
-
-interface ButtonProps {
-  className: string;
-  content: JSX.Element;
-  "aria-label": string;
-}
 
 const Button = ({ className, content }: ButtonProps): JSX.Element => {
   return (
