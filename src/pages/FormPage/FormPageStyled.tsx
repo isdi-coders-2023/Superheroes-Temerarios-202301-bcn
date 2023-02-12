@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const FormPageStyled = styled.section`
+  padding-left: 20px;
+  padding-right: 20px;
   div {
     display: flex;
     flex-direction: column;
@@ -13,6 +15,12 @@ const FormPageStyled = styled.section`
     height: 64px;
     margin-top: 100px;
   }
+
+  .button-recipe-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
   .button-recipe-content {
     font-style: normal;
     font-family: barlow, sans-serif;
@@ -20,7 +28,7 @@ const FormPageStyled = styled.section`
   }
 
   .searchbar {
-    width: 350px;
+    min-width: 92vw;
     height: 53;
   }
 
@@ -30,7 +38,9 @@ const FormPageStyled = styled.section`
     font-weight: medium;
     margin-top: 38px;
     margin-bottom: 20px;
+    text-align: left;
   }
+
   h2 {
     margin-top: 50px;
   }
