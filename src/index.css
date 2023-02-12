@@ -30,7 +30,8 @@ li {
   color: #fff;
 }
 
-a {
+a,
+button {
   color: inherit;
   text-decoration: none;
 }

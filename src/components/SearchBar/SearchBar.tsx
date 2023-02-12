@@ -1,22 +1,27 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Button from "../Button/Button";
 import SearchBarStyled from "./SearchBarStyled";
 
-const SearchBar = (): JSX.Element => {
+interface SearchBarProps {
+  arialabel: string;
+  type: string;
+  className: string;
+  placeholder: string;
+}
+
+const SearchBar = ({
+  arialabel,
+  type,
+  className,
+  placeholder,
+}: SearchBarProps): JSX.Element => {
   return (
     <SearchBarStyled>
       <input
-        aria-label="search-input"
-        type="text"
-        className="searchbar"
-        placeholder="Find your recipe"
-        autoFocus
+        aria-label={arialabel}
+        type={type}
+        className={className}
+        placeholder={placeholder}
       ></input>
-      <Button
-        aria-label="search"
-        className="button-submit"
-        content={<i className="fa-solid fa-arrow-right"></i>}
-      />
     </SearchBarStyled>
   );
 };
