@@ -15,6 +15,8 @@ const SearchBarStyled = styled.div`
     border: none;
     outline: none;
     border-radius: 10px;
+    color: inherit;
+    font-size: 1.1rem;
 
     &::placeholder {
       font-weight: 400;

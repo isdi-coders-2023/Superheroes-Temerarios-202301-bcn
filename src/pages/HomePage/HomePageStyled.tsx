@@ -8,6 +8,10 @@ const HomePageStyled = styled.main`
   padding-left: 20px;
   padding-right: 20px;
 
+  h2 {
+    font-size: 1.7rem;
+  }
+
   div {
     display: flex;
     justify-content: center;
