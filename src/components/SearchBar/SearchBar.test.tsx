@@ -6,6 +6,7 @@ describe("Given a SearchBar component", () => {
     test("Then it should show an input on the screen", () => {
       render(
         <SearchBar
+          id=""
           arialabel="search-input"
           type="text"
           className="searchbar"

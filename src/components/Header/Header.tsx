@@ -8,8 +8,10 @@ const Header = (): JSX.Element => {
         <img className="logo" src="/img/logo.png" alt="hack'n'eat logo" />
         <Link to="/">
           <div className="title-container">
-            <h1>Hack'n'Eat</h1>
-            <h2>Eat. Code. Repeat.</h2>
+            <span className="title-container__primary">Hack'n'Eat</span>
+            <span className="title-container__secondary">
+              Eat. Code. Repeat.
+            </span>
           </div>
         </Link>
       </div>

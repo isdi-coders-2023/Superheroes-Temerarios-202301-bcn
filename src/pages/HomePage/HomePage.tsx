@@ -23,6 +23,7 @@ const HomePage = (): JSX.Element => {
       <h2 className="heading">What do you want to eat?</h2>
       <div className="search-container">
         <SearchBar
+          id=""
           arialabel="search-input"
           type="text"
           className="searchbar"
