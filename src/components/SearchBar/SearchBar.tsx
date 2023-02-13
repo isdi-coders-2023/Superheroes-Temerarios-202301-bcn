@@ -2,6 +2,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import SearchBarStyled from "./SearchBarStyled";
 
 interface SearchBarProps {
+  id: string;
   arialabel: string;
   type: string;
   className: string;
@@ -9,6 +10,7 @@ interface SearchBarProps {
 }
 
 const SearchBar = ({
+  id,
   arialabel,
   type,
   className,
@@ -17,6 +19,7 @@ const SearchBar = ({
   return (
     <SearchBarStyled>
       <input
+        id={id}
         aria-label={arialabel}
         type={type}
         className={className}

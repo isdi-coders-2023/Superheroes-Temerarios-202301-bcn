@@ -8,8 +8,11 @@ const FormPage = () => {
       <div className="form-spanbar-container">
         <h2>Create your recipe</h2>
         <div>
-          <span className="form-titles">Name</span>
+          <label htmlFor="name" className="form-titles">
+            Name
+          </label>
           <SearchBar
+            id="name"
             arialabel="search-input"
             type="text"
             className="searchbar"
@@ -17,8 +20,11 @@ const FormPage = () => {
           />
         </div>
         <div className="form-spanbar-container">
-          <span className="form-titles">Cuisine Type</span>
+          <label htmlFor="cuisine-type" className="form-titles">
+            Cuisine Type{" "}
+          </label>
           <SearchBar
+            id="cuisine-type"
             arialabel="search-input"
             type="text"
             className="searchbar"
@@ -26,8 +32,11 @@ const FormPage = () => {
           />
         </div>
         <div className="form-spanbar-container">
-          <span className="form-titles">Ingredients</span>
+          <label htmlFor="ingredients" className="form-titles">
+            Ingredients
+          </label>
           <SearchBar
+            id="ingredients"
             arialabel="search-input"
             type="text"
             className="searchbar"
@@ -35,8 +44,11 @@ const FormPage = () => {
           />
         </div>
         <div className="form-spanbar-container">
-          <span className="form-titles">Image</span>
+          <label htmlFor="image" className="form-titles">
+            Image
+          </label>
           <SearchBar
+            id="image"
             arialabel="search-input"
             type="text"
             className="searchbar"
