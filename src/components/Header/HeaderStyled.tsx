@@ -28,18 +28,21 @@ const HeaderStyled = styled.header`
     gap: 30px;
   }
 
-  .title-container h2 {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    font-size: 20px;
-    font-weight: 00;
-    color: #2edb73;
-  }
+  .title-container {
+    &__primary {
+      align-items: start;
+      font-weight: bold;
+      font-size: 2em;
+    }
 
-  .title-container h1 {
-    align-items: start;
-    font-weight: bold;
+    &__secondary {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      font-size: 20px;
+      font-weight: 00;
+      color: #2edb73;
+    }
   }
 
   .logo {
